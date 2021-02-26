@@ -1,21 +1,22 @@
-<h1>Edit Task</h1>
+<h1 class="border-bottom">Edit Task</h1>
+<ul class ='form'>
+  <%= form_for(@task) do |f| %>
 
-<%= form_for(@task) do |f| %>
-<ul>
-  <li>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </li>
-  <li>
-    <%= f.label :details %>
-    <%= f.text_field :details %>
-  </li>
-   <li>
-    <%= f.label :completed %>
-    <%= f.check_box :completed %>
-  </li>
-  <li>
-    <%= f.submit %>
-  </li>
+    <li class='input'>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </li>
+    <li class='input'>
+      <%= f.label :description %>
+      <%= f.text_field :details %>
+    </li>
+    <li class='input-compl'>
+      <%= f.label :completed %>
+      <%= f.check_box :completed %>
+    </li>
+    
+    <li class="update-btn"><%= f.submit %></li>
+      
+    
+  <% end %>
 </ul>
-<% end %>

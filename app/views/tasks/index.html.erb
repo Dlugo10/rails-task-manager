@@ -10,7 +10,7 @@
         <i class="fa fa-square"></i>
       <% end %>
       <%= link_to task.title, task_path(task) %>
-      <span id='danger-btn'><%= link_to 'x', task_path(task), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger"%></span>
+      <%= link_to 'x', task_path(task), method: :delete, data: { confirm: "Are you sure?" }%>
     </li>
   <% end %>
 </ul>
